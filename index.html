@@ -16,7 +16,7 @@
             font-family: 'Arial', sans-serif;
             background: url('img/ff.jpeg') no-repeat center center;
             background-size: cover;
-            background-attachment: fixed; /* Fijar la imagen para un mejor efecto en desplazamientos */
+            background-attachment: fixed;
         }
 
         h1, h2 {
@@ -50,7 +50,7 @@
         }
 
         button:hover {
-            transform: scale(1.1); /* Pequeña animación al pasar el cursor */
+            transform: scale(1.1);
         }
 
         @keyframes fadeInOut {
@@ -71,6 +71,7 @@
             }
         }
 
+        /* Ajustes específicos para pantallas pequeñas */
         @media (max-width: 768px) {
             h1 {
                 font-size: 12vw;
@@ -82,6 +83,12 @@
 
             button {
                 font-size: 5vw;
+            }
+
+            /* Ajustar la imagen para pantallas más pequeñas */
+            body {
+                background-size: contain; /* Mantiene la imagen dentro del área visible */
+                background-position: center top; /* Asegura que la imagen esté centrada y visible desde arriba */
             }
         }
 
@@ -96,6 +103,11 @@
 
             button {
                 font-size: 6vw;
+            }
+
+            body {
+                background-size: contain; /* Asegura que la imagen no se corte en móviles */
+                background-position: center top;
             }
         }
     </style>
